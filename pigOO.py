@@ -1,43 +1,70 @@
 import random
 
 class Player:
-    __init__( self,  )
+    
+    def __init__(self, name=None):
+        self.name = name
+        self.score = 0
 
+    def add_score(self, player_score):
+        self.score += player_score
 
-def ():
-    pass
-
+    # def __str__(self):
+    #     return str(self.name) + ": " + str(self.score)
 
 class Dice:
-   __init__ (self, random)
+    def __init__(self):
+        self.value = random.randint(1, 6)
 
-min = 1
-max = 6
+    def roll(self):
+        self.value = random.randint(1, 6)
 
-roll_again = "yes"
+    # @staticmethod # look up
+    # def rolled_one():
+    #     print("Rolled 1. \n")
 
-while roll_again == "yes" or roll_again == "y":
-    print "Rolling the dices..."
-    print "The values are...."
-    print random.randint(min, max)
-    print random.randint(min, max)
-
-    roll_again = raw_input("Roll the dices again?") 
+    # def __str__(self):
+    #     return "Rolled " + str(self.value) + "."
 
 
-def ():
-    pass
+class ComputerPlayer(Player):
+    cpu_names=['Lisa','Daniel', 'Christina']
 
+    def __init__(self, number):
+       
+        # if number < len(self.cpu_names):
+        #     name = self.cpu_names[number]
+        # else:
+        #     name = 'Cpu{}'.format(number)
+
+        super(ComputerPlayer, self).__init__(name)
+
+    def keep_rolling(self, ?):
+
+class HumanPlayer(Player):
+    def __init__(self, name):
+        super(HumanPlayer, self).__init__(name)
+
+
+    def keep_rolling(self, box):
+        """Asks the human player, if they want to keep rolling."""
+
+        human_decision = input_number("  1 - Roll again, 0 - Hold? ", 0, 1)
+        if human_decision == 1:
+            return True
+        else:
+            return Falses
+        
 class Score:()
-__init__ (self, )
+pass
 
-def ():
-    pass
+class Gameloop()
+pass
 
-class Turn:
-__init__(self,)
 
 
 player_one_score = []
 computer_player = []
 
+class_die = Dice
+class_die(self.value)
